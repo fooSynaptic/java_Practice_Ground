@@ -14,6 +14,17 @@ public class Main {
 				{ 79, 81, 85 }, //
 		};
 		// TODO:
+		double average = getAverage(scores);
+		if (Math.abs(average - 77.733333) < 0.000001) {
+			System.out.println("测试成功");
+		} else {
+			System.out.println("测试失败");
+		}
+	}
+	
+	
+	
+	public static double getAverage(int [][] scores) {
 		double average = 0;
 		int r = scores.length;
 		int c = scores[0].length;
@@ -24,10 +35,9 @@ public class Main {
 		
 		average /= r*c;
 		System.out.println(average);
-		if (Math.abs(average - 77.733333) < 0.000001) {
-			System.out.println("测试成功");
-		} else {
-			System.out.println("测试失败");
-		}
+		return average;
+		
+		
 	}
+	
 }
