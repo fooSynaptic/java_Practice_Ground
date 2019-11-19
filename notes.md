@@ -1,4 +1,4 @@
-### 反射
+## 反射
 什么是反射？
 反射就是Reflection，java的反射是指程序在运行期可以拿到一个对象的所有信息。
 
@@ -69,7 +69,7 @@ public class Main {
 
 ```
 
-# 动态加载
+## 动态加载
 JVM在执行Java程序的时候，并不是一次性把所有用到的class全部加载到内存，而是第一次需要用到class时才加载。例如：
 ```java
 // Main.java
@@ -108,7 +108,7 @@ Class类提供了以下几个方法来获取字段：
 - Method[] getMethods()：获取所有public的Method（包括父类）
 - Method[] getDeclaredMethods()：获取当前类的所有Method（不包括父类）
 
-# 总结
+## 总结
 Java的反射API提供的Method对象封装了方法的所有信息：
 
 通过Class实例的方法可以获取Method实例：getMethod()，getMethods()，getDeclaredMethod()，getDeclaredMethods()；
@@ -122,7 +122,7 @@ Java的反射API提供的Method对象封装了方法的所有信息：
 
 
 
-### java collections framework 概览
+## java collections framework 概览
 
 `容器，就是可以容纳其他java对象的对象，java collections framwork 为java开发者提供了通用的容器`
 优点：
@@ -135,7 +135,7 @@ Java的反射API提供的Method对象封装了方法的所有信息：
 
 Java容器里只能放对象，对于基本类型（int, long, float, double等），需要将其包装成对象类型后（Integer, Long, Float, Double等）才能放到容器里。很多时候拆包装和解包装能够自动完成。这虽然会导致额外的性能和空间开销，但简化了设计和编程。
 
-# 泛型
+## 泛型
 Java容器能够容纳任何类型的对象，这一点表面上是通过泛型机制完成，Java泛型不是什么神奇的东西，只是编译器为我们提供的一个“语法糖”，泛型本身并不需要Java虚拟机的支持，只需要在编译阶段做一下简单的字符串替换即可。实质上Java的单继承机制才是保证这一特性的根本，因为所有的对象都是Object的子类，容器里只要能够存放Object对象就行了。
 
 事实上，所有容器的内部存放的都是Object对象，泛型机制只是简化了编程，由编译器自动帮我们完成了强制类型转换而已。JDK 1.4以及之前版本不支持泛型，类型转换需要程序员显式完成。
@@ -152,13 +152,13 @@ for(int i=0;i<list.size();i++){
 
 ```
 
-# 内存管理
+## 内存管理
 根cpp复杂的内存管理机制不同，java GC自动包揽了一切，java程序并不需要处理令人头疼的内存问题，因此JCF并不想C++ stl那样需要专门的空间适配器。
 另外，由于java中对象都在堆上，且对象只能通过引用访问，容器里放的其实是对象的引用而不是对象本身，也就不存在C++容器的复制拷贝问题。
 
 [java collection interfaces](https://zhuanlan.zhihu.com/p/24690125)
 
-# 迭代器iterator
+## 迭代器iterator
 根C++ stl一样，jcf的迭代器为我们提供了遍历容器中元素的方法，只有容器本身清楚容器里的元素的组织方式，因此迭代器只能通过容器本身得到。每个容器都会通过内部类的形式实现自己的迭代器。
 
 ```java
@@ -190,10 +190,11 @@ for(String weekday : list){//enhanced for statement
 
 
 
-### chapter 9 set
+# chapter 9 set
 
 
-队列接口嘴贱形势可能类似下面这样：
+
+队列接口实现形式可能类似下面这样：
 ```java
 pulic interface Queue<E>{
 	void add(E element);
@@ -759,5 +760,5 @@ List<JmenuItem> getAllItems(final JMenu menu){
 
 
 ## 遗留的集合
- 
+
 
