@@ -263,6 +263,20 @@ class BounceFrame extends JFrame{
 
 }
 ```
+- java.lang.Thread 1.0
+-- Thread(Runable target)
+ 	构造一个新线程，用于调用给定目标的run()方法。
+-- void start()
+	启动这个线程，将引用调用run()方法，这个方法将立即返回，并且新县城将并发运行。
+-- void run()
+	调用关联Runable的run方法。
+
+- java.lang.Runable 1.0
+-- void run()
+	必须覆盖这个方法，并且在这个方法中提供想要执行的任务指令。
+
+## 终端线程
+
 
 
 
