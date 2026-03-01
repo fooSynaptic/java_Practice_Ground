@@ -2,7 +2,7 @@
 
 A comprehensive collection of Java learning materials, exercises, and notes for mastering Java programming from basics to advanced topics.
 
-## 📚 Overview
+## <img src=".github/icons/book.svg" width="16" height="16" alt="book"> Overview
 
 This repository contains my personal Java learning journey, including:
 - Code exercises and practice problems
@@ -10,7 +10,7 @@ This repository contains my personal Java learning journey, including:
 - Sample projects demonstrating various Java concepts
 - Solutions to common programming challenges
 
-## 🗂️ Project Structure
+## <img src=".github/icons/card_index.svg" width="16" height="16" alt="card_index"> Project Structure
 
 ```
 java_Practice_Ground/
@@ -39,7 +39,7 @@ java_Practice_Ground/
 └── thinkingInJava/           # Notes from "Thinking in Java" book
 ```
 
-## 🚀 Getting Started
+## <img src=".github/icons/rocket.svg" width="16" height="16" alt="rocket"> Getting Started
 
 ### Prerequisites
 - Java JDK 13 or higher
@@ -60,7 +60,7 @@ Each curriculum folder is a self-contained Eclipse project. To run:
    java com.itranswarp.learnjava.Main
    ```
 
-## 📖 Topics Covered
+## <img src=".github/icons/book.svg" width="16" height="16" alt="book"> Topics Covered
 
 ### Core Java
 - Basic syntax and data types
@@ -104,7 +104,7 @@ Each curriculum folder is a self-contained Eclipse project. To run:
 - Synchronization
 - Concurrent collections
 
-## 📝 Notes
+## <img src=".github/icons/note.svg" width="16" height="16" alt="note"> Notes
 
 - [Java Key Technology Notes](notes/)
 - [Chapter 9: Set Collection](notes/chapter9_Set_Collection.md)
