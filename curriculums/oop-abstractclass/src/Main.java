@@ -1,20 +1,47 @@
-
 /**
- * Learn Java from https://www.liaoxuefeng.com/
+ * Demonstrates polymorphism with abstract classes.
  * 
- * @author liaoxuefeng
+ * This program calculates total tax for a person with multiple
+ * income sources (salary and royalties) using the Income abstraction.
+ * 
+ * @author Student
+ * @version 1.0
  */
 public class Main {
 
+	/**
+	 * Main entry point.
+	 * 
+	 * @param args command line arguments (not used)
+	 */
 	public static void main(String[] args) {
-		// TODO: 用抽象类给一个有工资收入和稿费收入的小伙伴算税:
-		Income[] incomes = new Income[] {new SalaryIncome(7500), new RoyaltyIncome(12000) };
-		double total = 0;
-		// TODO:
-		for(Income ic: incomes)
-			total += ic.getTax();
+		// Create income sources for a person with both salary and royalties
+		Income[] incomes = new Income[] {
+			new SalaryIncome(7500),    // Monthly salary
+			new RoyaltyIncome(12000)   // Book royalties
+		};
 		
-		System.out.println(total);
+		double totalTax = calculateTotalTax(incomes);
+		
+		System.out.println("Total tax to pay: " + totalTax);
 	}
-
+	
+	/**
+	 * Calculates total tax across multiple income sources.
+	 * 
+	 * This method demonstrates polymorphism - it works with any
+	 * subclass of Income without knowing the specific type.
+	 * 
+	 * @param incomes array of Income objects
+	 * @return total tax amount
+	 */
+	public static double calculateTotalTax(Income[] incomes) {
+		double total = 0.0;
+		
+		for (Income income : incomes) {
+			total += income.getTax();
+		}
+		
+		return total;
+	}
 }
